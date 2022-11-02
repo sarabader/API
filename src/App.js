@@ -2,32 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import react , {useEffect, useState} from 'react';
 import axios from "axios";
+import Creat from './component/Creat';
+import Get from './component/Get';
 
 
 function App() {
-  const [state, setState]=useState([])
-
-useEffect (() =>{
-  axios.get("https://rickandmortyapi.com/api/character").then((res) => {
-console.log(res.data.results);
-setState(res.data.results)
   
-  })
-
-},[])
   return (
    
     <div className="name">
-     
-{state.map(items=>{
-  return(
-    <div className='bor' >
-    <p>Image Name:{items.name}</p>
-    <img src= {items.image}></img>
-    </div>
-  )
-})}  
-    </div>
+      <Creat></Creat>  
+    <Get></Get>
+    </div> 
   );
 }
 
