@@ -8,9 +8,9 @@ import React, {useEffect, useState } from 'react'
     // axios.get("https://rickandmortyapi.com/api/character").then((res) => {
     // console.log(res.data.results);
     // setState(res.data.results)
-    axios.get("https://6362426866f75177ea2a9c61.mockapi.io/todolist").then((res) => {
-     console.log(res.data);
-    setState(res.data)
+    axios.get("https://rickandmortyapi.com/api/character").then((res) => {
+     console.log(res.data.results);
+    setState(res.data.results)
       
       })
     
@@ -22,12 +22,9 @@ import React, {useEffect, useState } from 'react'
     
            {state.map(items=>{
       return(
-        <div className='bor' >
-        <p>ID:{items.id}</p>
-        <p> First Name:{items.fName}</p>
-        <p> Last Name:{items.lName}</p>
-        <p> Email:{items.email}</p>
-        <p> Password:{items.password}</p>
+        <div className='' >
+        <p>Image Name:{items.name}</p>
+        <img src= {items.image}></img>
     
         </div>
       )
