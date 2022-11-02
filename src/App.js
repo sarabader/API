@@ -17,14 +17,14 @@ setState(res.data.results)
 },[])
   return (
    
-    <div className="App">
+    <div className="name">
      
 {state.map(items=>{
   return(
-    <>
+    <div className='bor' >
     <p>Image Name:{items.name}</p>
-    <p>Image :{items.image}</p>
-    </>
+    <img src= {items.image}></img>
+    </div>
   )
 })}  
     </div>

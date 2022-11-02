@@ -1,7 +1,15 @@
-.App {
-  text-align: center;
-}
 
+.name{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align: center;
+
+}
+.bor{
+  
+ border: 0.5px solid rgb(50, 48, 48);
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
